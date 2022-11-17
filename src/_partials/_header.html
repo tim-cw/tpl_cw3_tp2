@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ title ? title ~ " | ": '' }}La compréhension | TP02</title>
+
+        <link rel="stylesheet" href="styles/main.css" />
+
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body>
+        {% if title %}
+        <nav class="nav__main">
+            <a href="index.html" class="brand"> {{title}} </a>
+            <ul>
+                <li class="back">
+                    <a href="index.html">
+                        <svg class="icon">
+                            <use xlink:href="#icon-arrow-left"></use>
+                        </svg>
+                        Retour
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {% else %}
+        <nav class="nav__main">
+            <a href="index.html" class="brand"> Introduction </a>
+            <ul>
+                <li>
+                    <a href="question1.html"><span>Question </span>#1</a>
+                </li>
+                <li>
+                    <a href="question2.html"><span>Question </span>#2</a>
+                </li>
+                <li>
+                    <a href="question3.html"><span>Question </span>#3</a>
+                </li>
+                <li>
+                    <a href="question4.html"><span>Question </span>#4</a>
+                </li>
+                <li>
+                    <a href="question5.html"><span>Question </span>#5</a>
+                </li>
+                <li>
+                    <a href="question6.html"><span>Question </span>#6</a>
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
